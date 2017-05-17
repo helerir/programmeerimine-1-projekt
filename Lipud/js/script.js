@@ -38,8 +38,8 @@
      		}
       	}	else	{
  			if(tries == 5) {/* game over */
-    			if(window.confirm("Sorry ! Your chances are over. The country was  " + temp + "."
-    			"\nDo you want to play again?")) {
+    			if(window.confirm("Sorry ! Your chances are over. The country was  " + temp +
+    			".\nDo you want to play again?")) {
       				window.location.reload(); /* reloads the page for a new game */
  				}
  			}

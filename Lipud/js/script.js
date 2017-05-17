@@ -1,6 +1,6 @@
 	
-	var countries = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA", "FINLAND", "SWEDEN", 
-	"NETHERLANDS", "GERMANY", "BELGIUM"];
+	var countries = ["NIGERIA", "MOROCCO", "BOTSWANA"/*"ESTONIA", "FINLAND", "SWEDEN", 
+	"NETHERLANDS", "GERMANY", "BELGIUM"*/];
 
 	var randomCountry = Math.floor(Math.random()*countries.length);
 
@@ -33,7 +33,7 @@
      	}
  
    		if(guess.toUpperCase() == temp) { /* if guess equals to temp */
-     		if(window.confirm("Absolutely Right ! The country was " + temp + "\nDo you want to play again?")) {
+     		if(window.confirm("Absolutely Right ! The country was " + temp + ".\nDo you want to play again?")) {
       			window.location.reload();     /* reloads the page for a new game */
      		}
       	}	else	{
@@ -56,54 +56,53 @@
  		window.status = "Tries : " + tries;
  	}
 
+	var currentFlag=temp;
 
-		/* var currentFlag="nigeria";
-		function draw() {
-			var g=document.getElementById("board").getContext("2d");
-			if(currentFlag=="nigeria") {
-				g.clearRect(100, 100, 500, 300);
-				g.fillStyle="#008753";
-				g.fillRect(100, 100, 150, 200);
-				g.fillRect(400, 100, 150, 200);
-				g.fillStyle="#ffffff";
-				g.fillRect(250, 100, 150, 200);
- 			}
- 			if(currentFlag=="botswana"){
- 				g.clearRect(100, 100, 500, 300);
- 				g.fillStyle="#ffffff";
- 				g.fillRect(100, 200, 450, 50);
- 				g.fillStyle="#75AADB";
- 				g.fillRect(100, 100, 450, 100);
- 				g.fillRect(100, 250, 450, 100);
- 				g.fillStyle="#000000";
- 				g.fillRect(100, 208, 450, 35);
-			}
-			if(currentFlag=="morocco"){
-				g.clearRect(100, 100, 500, 300);
-				g.fillStyle="#c1272d";
-				g.fillRect(100, 100, 450, 250);
-				g.beginPath();
-				g.lineWidth=10;
-				g.strokeStyle="#006233";
-				g.moveTo(325, 170);
-				g.lineTo(295, 270);
-				g.lineTo(375, 210);
-				g.lineTo(275, 210);
-				g.lineTo(355, 270);
-				g.lineTo(325, 170);
-				g.lineTo(316, 200);
-				g.stroke();
-			}
+	function draw() {
+		var g=document.getElementById("flag-board").getContext("2d");
+		if(currentFlag=="NIGERIA") {
+			g.clearRect(100, 100, 300, 150);
+			g.fillStyle="#008753";
+			g.fillRect(0, 0, 100, 150);
+			g.fillRect(200, 0, 100, 150);
+			g.fillStyle="#ffffff";
+			g.fillRect(100, 0, 100, 150);
+ 		}
+ 		if(currentFlag=="BOTSWANA"){
+ 			g.clearRect(100, 100, 250, 150);
+ 			g.fillStyle="#ffffff";
+ 			g.fillRect(25, 0, 250, 150);
+ 			g.fillStyle="#75AADB";
+ 			g.fillRect(25, 0, 250, 50);
+ 			g.fillRect(25, 100, 250, 50);
+ 			g.fillStyle="#000000";
+ 			g.fillRect(25, 55, 250, 40);
 		}
+		if(currentFlag=="MOROCCO"){
+			g.clearRect(100, 100, 300, 150);
+			g.fillStyle="#c1272d";
+			g.fillRect(25, 0, 250, 150);
+			g.beginPath();
+			g.lineWidth=4;
+			g.strokeStyle="#006233";
+			g.moveTo(150, 50);
+			g.lineTo(135, 100);
+			g.lineTo(175, 70);
+			g.lineTo(125, 70);
+			g.lineTo(165, 100);
+			g.lineTo(150, 50);
+			g.lineTo(147, 60);
+			g.stroke();
+		}
+	}
 
-		function nigeriaFlag(){
-			currentFlag="nigeria"; draw();
-		}
-		function botswanaFlag(){
-			currentFlag="botswana"; draw();
-		}
-		function moroccoFlag(){
-			currentFlag="morocco"; draw();
-		}
-		window.onload=draw;
-		*/
+	function nigeriaFlag(){
+		currentFlag="NIGERIA"; draw();
+	}
+	function botswanaFlag(){
+		currentFlag="BOTSWANA"; draw();
+	}
+	function moroccoFlag(){
+		currentFlag="MOROCCO"; draw();
+	}
+	window.onload=draw;

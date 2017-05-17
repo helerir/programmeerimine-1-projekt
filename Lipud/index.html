@@ -4,11 +4,28 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
+	<meta name="description" content="Guess the flag">
 	<meta name="author" content="Heleri Roosnurm">
-	<title>African flags</title>
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Guess the flag</title>
 	<script>
+
+		var country = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA", "FINLAND", "SWEDEN", "NETHERLANDS", "GERMANY", "BELGIUM"];
+
+		var randomCountry = country[Math.floor(Math.random()*country.length)];
+		/* stores the country name */
+ 		var temp = country[sr];
+		/* declaring and initializing tries */
+ 		var tries = 0;
+
+				if (guess === randomFlag ) {
+					document.write('<p>You guessed the flag!</p>');
+				}  else {
+					document.write('<p>Sorry. The flag was ' + randomFlag + '</p>');
+				}
+
 		var currentFlag="nigeria";
 		function draw() {
 			var g=document.getElementById("board").getContext("2d");
@@ -62,9 +79,24 @@
 
 </head>
 <body>
-	<canvas id="board" width="700" height="500" style="background-color:grey;"></canvas><br />
-	<input type="button" value="NIGERIA" class="country" onclick="nigeriaFlag()" />
-	<input type="button" value="BOTSWANA" class="country" onclick="botswanaFlag()" />
-	<input type="button" value="MOROCCO" class="country" onclick="moroccoFlag()" />
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>Guess the flags!</h2>
+				<div class="input-group">
+      				<input type="text" class="form-control" placeholder="Which countries flag is it?">
+      				<span class="input-group-btn">
+        				<button class="btn btn-success" type="button">Guess!</button>
+      				</span>
+    			</div>
+			<!--<canvas id="board" width="700" height="500" style="background-color:grey;"></canvas><br />
+			<input type="button" value="NIGERIA" class="country" onclick="nigeriaFlag()" />
+			<input type="button" value="BOTSWANA" class="country" onclick="botswanaFlag()" />
+			<input type="button" value="MOROCCO" class="country" onclick="moroccoFlag()" />-->
+			</div>
+		</div>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

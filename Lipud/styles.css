@@ -1,0 +1,14 @@
+body {
+	margin: 0 auto;
+	padding: 20px;
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	margin: 20px auto; 
+}
+
+.row {
+	margin: 0 auto;
+}

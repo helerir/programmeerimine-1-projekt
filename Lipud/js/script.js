@@ -1,5 +1,5 @@
 	
-	var countries = ["NIGERIA", "MOROCCO", "BOTSWANA"/*"ESTONIA", "FINLAND", "SWEDEN", 
+	var countries = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA"/*"FINLAND", "SWEDEN", 
 	"NETHERLANDS", "GERMANY", "BELGIUM"*/];
 
 	var randomCountry = Math.floor(Math.random()*countries.length);
@@ -94,6 +94,15 @@
 			g.lineTo(147, 60);
 			g.stroke();
 		}
+		if(currentFlag=="ESTONIA"){
+			g.clearRect(100, 100, 300, 150);
+			g.fillStyle="#0072CE";
+			g.fillRect(25, 0, 250, 50);
+			g.fillStyle="#000000";
+			g.fillRect(25, 50, 250, 50);
+			g.fillStyle="#ffffff";
+			g.fillRect(25, 100, 250, 50);
+		}
 	}
 
 	function nigeriaFlag(){
@@ -104,5 +113,8 @@
 	}
 	function moroccoFlag(){
 		currentFlag="MOROCCO"; draw();
+	}
+	function estoniaFlag(){
+		currentFlag="ESTONIA"; draw();
 	}
 	window.onload=draw;

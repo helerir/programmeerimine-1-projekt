@@ -12,3 +12,24 @@ body {
 .row {
 	margin: 0 auto;
 }
+
+canvas {
+	background-color: grey;
+	width: 100%;
+	height: 100%;
+}
+
+.input-group {
+	width: 100%;
+}
+
+.input-group > * {
+	margin: 10px 0 10px 0;
+}
+
+.hint {
+	border: none;
+	color: black;
+	width: 100%;
+	margin: 10px 0 10px 0;
+}

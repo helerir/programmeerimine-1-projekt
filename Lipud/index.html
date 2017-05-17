@@ -11,16 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<title>Guess the flag</title>
 </head>
-<body>
+<body onLoad=showStatus() onKeyPress=catchKeyCode()>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<h2>Guess the flags!</h2>
-				<div class="input-group" name="input">
-      				<input type="text" class="form-control" placeholder="Which countries flag is it?">
-      				<span class="input-group-btn">
-        				<button class="btn btn-success" name="guess" type="button">Guess!</button>
-      				</span>
+				<input type="text" name="hint" id="hint" placeholder="Enter your guess below and click on Guess!" class="hint" readonly>
+				<div class="input-group" name="input1" id="input">
+      				<input type="text" name="guess1" id="guess1" class="form-control" placeholder="Which countries flag is it?">
+        			<button class="btn btn-success" type="button" onclick="guessIt()">Guess!</button>
+    			</div>
+    			<div class="flag">
+    				<canvas id="flag-board"></canvas>
     			</div>
 			<!--<canvas id="board" width="700" height="500" style="background-color:grey;"></canvas><br />
 			<input type="button" value="NIGERIA" class="country" onclick="nigeriaFlag()" />

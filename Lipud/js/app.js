@@ -8,6 +8,14 @@ var score = 0;
 
 document.getElementById("score").innerHTML = "Score: " + score;
 
+function drawNewFlag() {
+	randomCountry = Math.floor(Math.random()*countries.length);
+	currentFlag = countries[randomCountry];
+	new Flag(currentFlag);
+	tries = 0;
+	score += 10;
+}
+
 function guessIt() {
 	var guess = document.getElementById("guess1").value;
 	tries++;	
@@ -29,14 +37,15 @@ function guessIt() {
 	}
 	 
 	if(guess.toUpperCase() == currentFlag) {
-		score += 10;
 		document.getElementById("hint").value = "You guessed right! The country is " + currentFlag + ".";
+		drawNewFlag();
 
+	
 	} else {
 	 	if(tries == 4) {
 		  if(window.confirm("Sorry ! Your chances are over. The country was  " + currentFlag +
 		  ".\nDo you want to play again?")) {
-		    window.location.reload(); /* reloads the page for a new game */
+		    window.location.reload();
 		 	}
 		}
 	}

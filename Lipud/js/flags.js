@@ -1,8 +1,8 @@
 class Flag {
   constructor(currentFlag) {
 		var g=document.getElementById("flag-board").getContext("2d");
+		g.clearRect(0, 0, g.canvas.width, g.canvas.height);
 		if(currentFlag=="NIGERIA") {
-			g.clearRect(100, 100, 300, 150);
 			g.fillStyle="#008753";
 			g.fillRect(0, 0, 100, 150);
 			g.fillRect(200, 0, 100, 150);
@@ -10,7 +10,6 @@ class Flag {
 			g.fillRect(100, 0, 100, 150);
 		}
 		if(currentFlag=="BOTSWANA") {
-		 	g.clearRect(100, 100, 250, 150);
 		 	g.fillStyle="#ffffff";
 		 	g.fillRect(25, 0, 250, 150);
 		 	g.fillStyle="#75AADB";
@@ -20,7 +19,6 @@ class Flag {
 		 	g.fillRect(25, 55, 250, 40);
 		}
 		if(currentFlag=="MOROCCO") {
-			g.clearRect(100, 100, 300, 150);
 			g.fillStyle="#c1272d";
 			g.fillRect(25, 0, 250, 150);
 			g.beginPath();
@@ -36,7 +34,6 @@ class Flag {
 			g.stroke();
 		}
 		if(currentFlag=="ESTONIA"){
-			g.clearRect(100, 100, 300, 150);
 			g.fillStyle="#0072CE";
 			g.fillRect(25, 0, 250, 50);
 			g.fillStyle="#000000";

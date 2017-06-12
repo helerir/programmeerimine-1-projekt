@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<title>Guess the flag</title>
 </head>
-<body onLoad=showStatus() onKeyPress=catchKeyCode() class="game-page">
+<body onKeyPress=catchKeyCode() class="game-page">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -21,11 +21,11 @@
     		</div>
 				<input type="text" name="hint" id="hint" class="hint" readonly>
 				<div class="input-group" name="input1" id="input">
-      		<input type="text" name="guess1" id="guess1" class="form-control" placeholder="Which countries flag is it?">
+      		<input type="text" name="guess1" id="guess1" class="form-control" placeholder="Which countries' flag is it?">
       		<div class="score" id="score"></div>
-        	<button class="btn btn-success btn-lg" type="button" onclick="guessIt()">GUESS</button>
-        	<button class="btn btn-danger" type="button"><a href="index.html">EXIT</a></button>
-        	<button class="btn btn-primary" type="button" onclick="location.reload()">NEW GAME</button>
+      		<button class="btn btn-success btn-lg" type="button" onclick="guessIt()">GUESS</button>
+        	<button class="btn btn-danger btn-sm" type="button"><a href="index.html">EXIT</a></button>
+        	<button class="btn btn-primary btn-sm" type="button" onclick="location.reload()">NEW GAME</button>
     		</div>
 			</div>
 		</div>

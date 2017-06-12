@@ -41,5 +41,37 @@ class Flag {
 			g.fillStyle="#ffffff";
 			g.fillRect(25, 100, 250, 50);
 		}
+		if(currentFlag=="GERMANY"){
+			g.fillStyle="#000000";
+			g.fillRect(25, 0, 250, 50);
+			g.fillStyle="#ff0000";
+			g.fillRect(25, 50, 250, 50);
+			g.fillStyle="#ffcc00";
+			g.fillRect(25, 100, 250, 50);
+		}
+		if(currentFlag=="NETHERLANDS"){
+			g.fillStyle="#ae1c28";
+			g.fillRect(25, 0, 250, 50);
+			g.fillStyle="#ffffff";
+			g.fillRect(25, 50, 250, 50);
+			g.fillStyle="#21468b";
+			g.fillRect(25, 100, 250, 50);
+		}
+		if(currentFlag=="RUSSIA"){
+			g.fillStyle="#ffffff";
+			g.fillRect(25, 0, 250, 50);
+			g.fillStyle="#0039a6";
+			g.fillRect(25, 50, 250, 50);
+			g.fillStyle="#d52b1e";
+			g.fillRect(25, 100, 250, 50);
+		}
+		if(currentFlag=="LITHUANIA"){
+			g.fillStyle="#fdb913";
+			g.fillRect(25, 0, 250, 50);
+			g.fillStyle="#006a44";
+			g.fillRect(25, 50, 250, 50);
+			g.fillStyle="#c1272d";
+			g.fillRect(25, 100, 250, 50);
+		}
   }
 }

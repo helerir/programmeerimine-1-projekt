@@ -1,6 +1,5 @@
 
-var countries = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA"/*"FINLAND", "SWEDEN", 
-"NETHERLANDS", "GERMANY", "BELGIUM"*/];
+var countries = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA", "GERMANY", "NETHERLANDS", "RUSSIA", "LITHUANIA"/*"FINLAND", "SWEDEN", "BELGIUM"*/];
 var randomCountry = Math.floor(Math.random()*countries.length);
 var currentFlag = countries[randomCountry];
 var tries = 0;
@@ -14,12 +13,11 @@ function drawNewFlag() {
 	tries = 0;
 	score += 10;
 	document.getElementById("score").innerHTML = "Score: " + score;
-
 }
 
 function guessIt() {
 	var guess = document.getElementById("guess1").value;
-	tries++;	
+	tries++;
 	 
 	switch(tries) {
 	 	case 1:
@@ -38,13 +36,12 @@ function guessIt() {
 	}
 	 
 	if(guess.toUpperCase() == currentFlag) {
-		document.getElementById("hint").value = "You guessed right! The country is " + currentFlag + ".";
+		document.getElementById("hint").value = "You guessed right! The country is " + currentFlag + ". Do You know next one as well?";
 		drawNewFlag();
-
 	
 	} else {
 	 	if(tries == 4) {
-			
+			window.location.reload();
 		}
 	}
 }

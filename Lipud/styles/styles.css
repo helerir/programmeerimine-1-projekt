@@ -6,7 +6,7 @@ body {
 }
 
 .game-page {
-	background-color: #fcfbfa;
+	background-color: #efefef;
 }
 
 a {
@@ -47,10 +47,11 @@ canvas {
 }
 
 .input-group > .btn {
-	margin: 50px 10px 10px 10px;
+	margin: 20px 10px 10px 10px;
 }
 
 .hint {
+	background-color: transparent;
 	border: none;
 	color: black;
 	width: 100%;

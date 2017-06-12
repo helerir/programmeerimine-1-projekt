@@ -15,15 +15,27 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h2>Guess the flags!</h2>
+				<h2>Guess the flags</h2>
 				<div class="flag">
     			<canvas id="flag-board"></canvas>
     		</div>
-				<input type="text" name="hint" id="hint" class="hint" readonly>
-				<div class="input-group" name="input1" id="input">
-      		<input type="text" name="guess1" id="guess1" class="form-control" placeholder="Which countries' flag is it?">
-      		<div class="score" id="score"></div>
-      		<button class="btn btn-success btn-lg" type="button" onclick="guessIt()">GUESS</button>
+    		<div class="input-group">
+					<input type="text" name="hint" id="hint" class="hint" readonly>
+					<input type="text" name="guess1" id="guess1" class="form-control" placeholder="Which countries' flag is it?"/>
+	      	<div class="score" id="score" style="margin-top:50px;"></div>
+      	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+					<div class="input-group small-buttons" name="input1" id="input">
+      			<button class="btn btn-success btn-lg" type="button" onclick="guessIt()">GUESS</button>
+      		</div>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="input-group small-buttons" name="input1" id="input">
         	<button class="btn btn-danger btn-sm" type="button"><a href="index.html">EXIT</a></button>
         	<button class="btn btn-primary btn-sm" type="button" onclick="location.reload()">NEW GAME</button>
     		</div>

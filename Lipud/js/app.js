@@ -9,7 +9,9 @@ var score = 0;
 function drawNewFlag() {
 	randomCountry = Math.floor(Math.random()*countries.length);
 	currentFlag = countries[randomCountry];
-	new Flag(currentFlag);
+	if(currentFlag != currentFlag) {
+		new Flag(currentFlag);
+	}
 	tries = 0;
 	score += 10;
 	document.getElementById("score").innerHTML = "Score: " + score;
@@ -38,7 +40,7 @@ function guessIt() {
 	if(guess.toUpperCase() == currentFlag) {
 		document.getElementById("hint").value = "You guessed right! The country is " + currentFlag + ". Do You know next one as well?";
 		drawNewFlag();
-	
+
 	} else {
 	 	if(tries == 4) {
 			window.location.reload();

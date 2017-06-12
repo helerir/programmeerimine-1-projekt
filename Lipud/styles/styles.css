@@ -5,6 +5,10 @@ body {
 	height: 100vh;
 }
 
+.game-page {
+	background-color: #fcfbfa;
+}
+
 a {
 	color: white;
 }

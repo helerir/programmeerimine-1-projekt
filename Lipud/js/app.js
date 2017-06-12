@@ -1,20 +1,17 @@
 
 var countries = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA"/*"FINLAND", "SWEDEN", 
 "NETHERLANDS", "GERMANY", "BELGIUM"*/];
-
 var randomCountry = Math.floor(Math.random()*countries.length);
-
-/* stores the country name */
 var currentFlag = countries[randomCountry];
-/* declaring and initializing tries */
 var tries = 0;
+var score = 0;
 
-/* the main function */
+document.getElementById("score").innerHTML = "Score: " + score;
+
 function guessIt() {
 	var guess = document.getElementById("guess1").value;
-	tries++;
+	tries++;	
 	 
-	window.status = "You have " + tries + "tries left!";
 	switch(tries) {
 	 	case 1:
 	    document.getElementById("hint").value = 
@@ -31,12 +28,12 @@ function guessIt() {
 	  default: document.getElementById("hint").value = "No hints are available anymore!";
 	}
 	 
-	if(guess.toUpperCase() == currentFlag) { /* if guess equals to currentFlag */
-	  if(window.confirm("Absolutely Right ! The country was " + currentFlag + ".\nDo you want to play again?")) {
-	      window.location.reload();     /* reloads the page for a new game */
-	  }
+	if(guess.toUpperCase() == currentFlag) {
+		score += 10;
+		document.getElementById("hint").value = "You guessed right! The country is " + currentFlag + ".";
+
 	} else {
-	 	if(tries == 5) {/* game over */
+	 	if(tries == 4) {
 		  if(window.confirm("Sorry ! Your chances are over. The country was  " + currentFlag +
 		  ".\nDo you want to play again?")) {
 		    window.location.reload(); /* reloads the page for a new game */
@@ -45,14 +42,11 @@ function guessIt() {
 	}
 }
 
-function catchKeyCode() {//calls when the user press the RETURN key
+
+function catchKeyCode() {
 	if(event.keyCode == 13) {
 	  guessIt();
 	}
-}
-	 
-function showStatus() {
-	window.status = "Tries : " + tries;
 }
 
 window.onload = new Flag(currentFlag);

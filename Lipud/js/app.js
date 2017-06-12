@@ -9,9 +9,7 @@ var score = 0;
 function drawNewFlag() {
 	randomCountry = Math.floor(Math.random()*countries.length);
 	currentFlag = countries[randomCountry];
-	if(currentFlag != currentFlag) {
-		new Flag(currentFlag);
-	}
+	new Flag(currentFlag);
 	tries = 0;
 	score += 10;
 	document.getElementById("score").innerHTML = "Score: " + score;

@@ -6,7 +6,6 @@ var currentFlag = countries[randomCountry];
 var tries = 0;
 var score = 0;
 
-document.getElementById("score").innerHTML = "Score: " + score;
 
 function drawNewFlag() {
 	randomCountry = Math.floor(Math.random()*countries.length);
@@ -14,6 +13,8 @@ function drawNewFlag() {
 	new Flag(currentFlag);
 	tries = 0;
 	score += 10;
+	document.getElementById("score").innerHTML = "Score: " + score;
+
 }
 
 function guessIt() {
@@ -43,10 +44,7 @@ function guessIt() {
 	
 	} else {
 	 	if(tries == 4) {
-		  if(window.confirm("Sorry ! Your chances are over. The country was  " + currentFlag +
-		  ".\nDo you want to play again?")) {
-		    window.location.reload();
-		 	}
+			
 		}
 	}
 }

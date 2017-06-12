@@ -1,5 +1,5 @@
 class Flags {
-	constructor () {
+	constructor(g) {
 		
 	}
 } 

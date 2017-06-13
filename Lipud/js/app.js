@@ -80,6 +80,7 @@ function guessIt() {
 		document.getElementById("guess1").placeholder ="Which countries' flag is it?";  
 		document.getElementById("guess1").value = "";
 		drawNewFlag();
+		countryList();
 
 	} else {
 	 	if(tries == 4) {

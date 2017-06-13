@@ -77,13 +77,15 @@ function guessIt() {
 	if(guess.toUpperCase() == currentFlag) {
 		document.getElementById("hint").value = "You guessed right! The country is " + currentFlag + 
 		". Do You know next one as well?";
-		document.getElementById('guess1').placeholder ="Which countries' flag is it?";  
-		document.getElementById('guess1').value = "";
+		document.getElementById("guess1").placeholder ="Which countries' flag is it?";  
+		document.getElementById("guess1").value = "";
 		drawNewFlag();
 
 	} else {
 	 	if(tries == 4) {
-			window.location.reload();
+	 		document.getElementById("gameover").innerHTML = '<span>Game over</span><br/><br/>You did not guess the flag right, it was ' 
+	 		+ currentFlag + '. <br/>Press NEW GAME to start again. <br/><br/>YOUR SCORE: ' + score;
+	 		document.getElementById("guess1").readOnly = true;
 		}
 	}
 }

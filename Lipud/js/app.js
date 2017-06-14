@@ -38,6 +38,7 @@ function guessIt() {
 	}
 
  	if(countries.length == 0) {
+ 		document.getElementById("hint").value = "";
 		document.getElementById("gameover").innerHTML = '<span>You won!</span><br/><br/>You guessed all flags right.<br/>Press NEW GAME to start again. <br/><br/>YOUR SCORE: ' + score;
 	 	document.getElementById("guess1").readOnly = true;
 	 

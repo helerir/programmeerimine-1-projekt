@@ -29,10 +29,12 @@ function guessIt() {
 	  case 2:
 	    document.getElementById("hint").value = 
 	    "Second Hint : The country name ends with " + currentFlag.charAt(currentFlag.length - 1);
+	    score -= 5;
 	  break;
 	 	case 3:
 	    document.getElementById("hint").value = 
 	    "Last Hint : The country name has " + currentFlag.length + " characters";
+	    score -= 9;
 	  break;
 	  default: document.getElementById("hint").value = "No hints are available anymore!";
 	}

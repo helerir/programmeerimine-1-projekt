@@ -2,57 +2,20 @@
 var countries = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA", "GERMANY", "NETHERLANDS", 
 "RUSSIA", "LITHUANIA"/*"FINLAND", "SWEDEN", "BELGIUM"*/];
 var randomCountries = Math.floor(Math.random() * countries.length);
-//var randomCountries = shuffle(countries);
 var currentFlag = countries[randomCountries];
+countries.splice();
 console.log(currentFlag);
 var tries = 0;
 var score = 0;
 
 function drawNewFlag() {
 	var randomCountries = Math.floor(Math.random() * countries.length);
-	currentFlag = countries[randomCountries];
+	currentFlag = countries.splice(randomCountries, 1)[0];
 	new Flag(currentFlag);
 	tries = 0;
 	score += 10;
 	document.getElementById("score").innerHTML = "Score: " + score;
 }
-/*
-function shuffle(array) {
-       
-    var ctr = array.length, temp, index;
-
-// While there are elements in the array
-    while (ctr > 0) {
-// Pick a random index
-        index = Math.floor(Math.random() * ctr);
-// Decrease ctr by 1
-        ctr--;
-// And swap the last element with it
-        temp = array[ctr];
-        array[ctr] = array[index];
-        array[index] = temp;
-
-        
-    }
-
-    return array;
-}
-*/
-/*function noRepeat() {
-
-var myList = new Array();
-for (var i = countries[0]; i <= countries.length; i++) {
-	myList.push(i);
-}
-
-	myList.sort(function (a, b) {
-		return Math.floor(Math.random() * 2) - 1;
-	});
-
-	var myNums = myList.splice(0, );
-	alert(myNums)
-
-}*/
 
 function guessIt() {
 	var guess = document.getElementById("guess1").value;
@@ -73,14 +36,17 @@ function guessIt() {
 	  break;
 	  default: document.getElementById("hint").value = "No hints are available anymore!";
 	}
+
+ 	if(countries.length == 0) {
+		document.getElementById("gameover").innerHTML = '<span>You won!</span><br/><br/>You guessed all flags right.<br/>Press NEW GAME to start again. <br/><br/>YOUR SCORE: ' + score;
+	 	document.getElementById("guess1").readOnly = true;
 	 
-	if(guess.toUpperCase() == currentFlag) {
+	} else if(guess.toUpperCase() == currentFlag) {
 		document.getElementById("hint").value = "You guessed right! The country is " + currentFlag + 
 		". Do You know next one as well?";
 		document.getElementById("guess1").placeholder ="Which countries' flag is it?";  
 		document.getElementById("guess1").value = "";
 		drawNewFlag();
-		countryList();
 
 	} else {
 	 	if(tries == 4) {
@@ -90,7 +56,6 @@ function guessIt() {
 		}
 	}
 }
-
 
 function catchKeyCode() {
 	if(event.keyCode == 13) {

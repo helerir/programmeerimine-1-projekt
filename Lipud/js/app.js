@@ -1,6 +1,6 @@
 
 var countries = ["NIGERIA", "MOROCCO", "BOTSWANA", "ESTONIA", "GERMANY", "NETHERLANDS", 
-"RUSSIA", "LITHUANIA"/*"FINLAND", "SWEDEN", "BELGIUM"*/];
+"RUSSIA", "LITHUANIA", "BELGIUM", "SIERRA LEONE", "REPUBLIC OF THE CONGO"/*"FINLAND", "SWEDEN"*/];
 var randomCountries = Math.floor(Math.random() * countries.length);
 var currentFlag = countries[randomCountries];
 countries.splice();

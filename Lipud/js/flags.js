@@ -73,5 +73,43 @@ class Flag {
 			g.fillStyle="#c1272d";
 			g.fillRect(25, 100, 250, 50);
 		}
+		if(currentFlag=="SIERRA LEONE"){
+			g.fillStyle="#1EB53A";
+			g.fillRect(25, 0, 250, 50);
+			g.fillStyle="#FFFFFF";
+			g.fillRect(25, 50, 250, 50);
+			g.fillStyle="#0072C6";
+			g.fillRect(25, 100, 250, 50);
+		}
+		if(currentFlag=="BELGIUM"){
+			g.fillStyle="#000000";
+			g.fillRect(75, 0, 50, 150);
+			g.fillStyle="#FFE936";
+			g.fillRect(125, 0, 50, 150);
+			g.fillStyle="#FF0F21";
+			g.fillRect(175, 0, 50, 150);
+		}
+		if(currentFlag=="REPUBLIC OF THE CONGO"){
+			g.fillStyle="#009543";
+			g.beginPath();
+    		g.moveTo(0, 0);
+    		g.lineTo(185, 0);
+    		g.lineTo(0, 150);
+    		g.fill();
+			g.fillStyle="#FBDE4A";
+			g.beginPath();
+    		g.moveTo(185, 0);
+    		g.lineTo(0, 150);
+			g.lineTo(100, 150);
+    		g.lineTo(300, 0);	
+    		g.fill();
+			g.fillStyle="#DC241F";
+			g.beginPath();
+    		g.moveTo(300, 0);
+    		g.lineTo(100, 150);
+			g.lineTo(300, 150);
+    		g.lineTo(300, 0);	
+    		g.fill();
+		}
   }
 }

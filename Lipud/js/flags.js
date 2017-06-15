@@ -1,5 +1,5 @@
 class Flag {
-  constructor(currentFlag) {
+  	constructor(currentFlag) {
 		var g=document.getElementById("flag-board").getContext("2d");
 		g.clearRect(0, 0, g.canvas.width, g.canvas.height);
 		if(currentFlag=="NIGERIA") {
@@ -111,5 +111,5 @@ class Flag {
     		g.lineTo(300, 0);	
     		g.fill();
 		}
-  }
+  	}
 }
